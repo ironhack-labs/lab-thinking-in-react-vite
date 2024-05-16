@@ -10,13 +10,10 @@ const ProductTable = (props) => {
           </tr>
         </thead>
         <tbody>
-        {props.map(productDetails => {
-            return (
+        {props.allProducts.map(productDetails => {
+            return <ProductRow key={productDetails.id} product={productDetails} />
 
-            <tr className="table" key={productDetails.id}>
-            <ProductRow product={productDetails} />
-
-            </tr>)
+        
 })}
 </tbody>
 </table>

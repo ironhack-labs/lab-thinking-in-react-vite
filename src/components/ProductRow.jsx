@@ -1,9 +1,9 @@
 const ProductRow = props => {
     return (
-        <div>
-            <td>{props.product.name}</td>
+        <tr className="table">
+            <td>{props.product.name} {props.product.inStock ? style={color: 'red'} : style={color: 'black'}}</td>
             <td>{props.product.price}</td>
-        </div>
+        </tr>
     )
 }
 
