@@ -1,7 +1,7 @@
 const ProductRow = props => {
     return (
-        <tr className="table">
-            <td>{props.product.name} {props.product.inStock ? style={color: 'red'} : style={color: 'black'}}</td>
+        <tr className="table-values">
+            <td className={props.product.inStock ? 'black' : 'red'}> {props.product.name}; </td>
             <td>{props.product.price}</td>
         </tr>
     )

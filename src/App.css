@@ -2,6 +2,37 @@
   text-align: center;
 }
 
+.red {
+  color: red
+}
+
+.black {
+  color: black
+}
+
+.table {
+margin: 3rem auto auto auto;
+width: 30rem;
+border-collapse: collapse;
+/* border-bottom: 1px solid rgb(141, 161, 194); */
+}
+
+td {
+  border-collapse: collapse;
+  border-bottom: 1px solid rgb(141, 161, 194); 
+  line-height: 2.5rem
+}
+
+table thead tr {
+  border-bottom: 1px solid rgb(141, 161, 194);
+  line-height: 2.5rem
+}
+
+.search-window {
+  width: 30rem;
+  margin: 1rem;
+}
+
 
 
 

@@ -2,9 +2,9 @@ import ProductRow from "./ProductRow";
 
 const ProductTable = (props) => {
     return (
-        <table>
-        <thead>
-          <tr className="table">
+        <table className = "table">
+        <thead className="table-head">
+          <tr>
             <th>Name</th>
             <th>Price</th>
           </tr>
