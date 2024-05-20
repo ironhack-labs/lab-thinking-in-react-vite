@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ProductRow({products}) {
+function ProductRow({products, searchQuery, showInStockOnly}) {
   return (
     <>
     <table style={{width: '100%'}}>
@@ -13,7 +13,11 @@ function ProductRow({products}) {
       <tbody>
         {
           products && (
-            products.map((product) => {
+            products.filter((product) => {
+              return searchQuery.toLowerCase() === '' ? product : product.name.toLowerCase().includes(searchQuery)
+            }).filter((product) => {
+              return showInStockOnly ? product.inStock : product
+            }).map((product) => {
               return (
                 <tr key={product.id}>
                   <td style={{padding: '16px', color: !product.inStock && 'red'}}>{product.name}</td>
