@@ -31,7 +31,3 @@ ProductRow.propTypes = {
 };
 
 export default ProductRow;
-//{"category": "Sporting Goods",  
-//"price": "$49.99",    "inStock": true,    
-//"name": "Football",    
-//"id": "295a4dab-74b2-4e60-b3c2-c1346aba7585"},
