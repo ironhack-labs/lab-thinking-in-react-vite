@@ -57,9 +57,6 @@ Now one more time, we will be _thinking and acting_ in that direction. Maybe in 
 
 - Create a Pull Request and submit your assignment.
 
-
-
-
 ## Instructions
 
 ### Iteration 0 | Introduction

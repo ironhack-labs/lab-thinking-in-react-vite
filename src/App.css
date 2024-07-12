@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  margin: 10px;
+  padding: 10px;
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.card--out-of-stock {
+  background-color: #f8d7da;
+}
