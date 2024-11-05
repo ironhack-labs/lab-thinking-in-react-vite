@@ -13,7 +13,7 @@ export default function ProductsPage() {
       <h1>IronStore</h1>
 
       <SearchBar />
-      <ProductTable products={jsonData} />
+      <ProductTable products={products} />
     </div>
   );
 }
