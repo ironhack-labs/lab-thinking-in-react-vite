@@ -1,7 +1,12 @@
 export default function ProductRow() {
   return (
     <div>
-      <h1>Product Row</h1>
+      <tr>
+        <td>{product.name}</td>
+        <td>{product.price}</td>
+        <td>{product.category}</td>
+        {/* <td>{product.inStock ? "Yes" : "No"}</td> */}
+      </tr>
     </div>
   );
 }
