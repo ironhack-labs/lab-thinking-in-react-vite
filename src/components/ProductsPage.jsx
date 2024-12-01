@@ -1,34 +1,24 @@
 import { useState } from "react";
-import jsonData from "./../data.json";
-import SearchBar from "./SearchBar";
+import jsonData from "../data/data.json"
 import ProductTable from "./ProductTable";
+import SearchBar from "./SearchBar";
 
-function ProductsPage() {
-    const [ products, setProducts ] = useState( jsonData );
-    const [ search, setSearch ] = useState("");
+function ProductsPage({ className = "" }) {
+    const [ products, setProducts ] = useState( jsonData ) 
+    const [ searchText, setSearchText ] = useState("")
+    const [ checkStock, setCheckStock ] = useState(false)
 
-    //Search:
-    const handleSearch = ( searchText ) => {
-        setSearch( searchText );
-        filterProducts( searchText );
-    }
+    const onSearch = ( value ) => setSearchText( value );
 
-    //Filter products:
-    const filterProducts = ( searchText ) => {
-        //New filtered list:
-        const filteredProducts = jsonData.filter((product) => 
-            product.name.toLowerCase().includes( searchText.toLowerCase() )
-        )
-        //Set products = filteredProducts
-        setProducts( filteredProducts );
-    }
+    const onCheckStock = ( checked ) => setCheckStock( checked );
+
     return (
-        <div>
+        <div className={`w-50 text-center ${className}`}>
             <h1> IronStore </h1>
-            <SearchBar search = { search } onSearch={ handleSearch }/>
-            <ProductTable products = { products } />
+            <SearchBar search={searchText} onSearch={onSearch} checkStock={checkStock} onCheckStock={onCheckStock} className="mb-5"/>
+            <ProductTable products={products} searchText={searchText} checkStock={checkStock} />
         </div>
-    );
+    )
 }
 
 export default ProductsPage;

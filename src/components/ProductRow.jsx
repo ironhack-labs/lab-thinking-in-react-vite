@@ -1,10 +1,11 @@
-function ProductRow ({ product }) {
+function ProductRow({ product }) {
+    const { name, price, inStock } = product;
     return (
-        <tr className= { !product.inStock ? "text-danger" : ""}>
-            <td> { product.name } </td>
-            <td> {product.price }</td>
+        <tr>
+            <td className={`${!inStock ? "text-danger fw-bold" : ""}`}>{name}</td>
+            <td>{price}</td>
         </tr>
-    );
+    )
 }
 
 export default ProductRow;

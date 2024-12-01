@@ -1,25 +1,26 @@
 import ProductRow from "./ProductRow";
 
-function ProductTable( { products }) {
-
-    if (!Array.isArray(products)) {
-        return <div>Error: products must be an array</div>;
-    }
+function ProductTable({ products, searchText, checkStock }) {
     return (
-        <table>
-            <thead>
+        <div className="d-flex justify-content-center">
+            <table className="table text-center">
+            <thead className="table-light">
                 <tr>
-                    <th>Name</th>
-                    <th>Price</th>
+                    <th> Name </th>
+                    <th> Price </th>
                 </tr>
             </thead>
             <tbody>
-            {products.map( product => (
-                <ProductRow key = { product.id } product = { product }/>
-            ))}
+                {products
+                .filter( p => p.name.toLowerCase().includes( searchText.toLowerCase() ))
+                .filter( p => checkStock ? p.inStock : true )
+                .map( product => (
+                    <ProductRow key={product.id} product={product} />
+                ))}
             </tbody>
         </table>
-    );
+        </div>
+    )
 }
 
 export default ProductTable;
