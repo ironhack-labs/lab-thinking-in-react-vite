@@ -1,9 +1,11 @@
-import "./App.css";
+import ProductsPage from "./components/ProductsPage";
+import SearchBar from "./components/SearchBar";
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>React | Thinking in React</h1>
+    <div className="d-flex flex-column align-items-center">
+       <ProductsPage className="m-4"/>
     </div>
   );
 }
