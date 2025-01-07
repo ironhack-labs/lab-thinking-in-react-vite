@@ -1,6 +1,6 @@
 function ProductTable(){
     return (
-        <>
+        
             <table style={{width: '100%', backgroundColor: 'lightgray'}}>
                 <thead>
                     <tr>
@@ -9,7 +9,7 @@ function ProductTable(){
                     </tr>
                     </thead>
             </table>
-        </>
+        
     )
 }
 
