@@ -7,12 +7,28 @@
   pointer-events: none;
 }
 
+table {
+  width: 80%;
+  text-align: center;
+}
+.product-table {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #61dafb;
+  padding: 20px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.product-row {
+  color: black
+}
+.product-row-not-stock {
+  color: red;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
