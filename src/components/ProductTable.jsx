@@ -1,8 +1,9 @@
 import ProductRow from "./ProductRow";
 
 function ProductTable({products}){
-  return (
-  <table style={{width: '100%', backgroundColor: 'lightgray'}}>
+return (
+ <div className="product-table">
+ <table style={{ backgroundColor: 'lightgray'}}>
 
      <thead>
       <tr>
@@ -10,14 +11,14 @@ function ProductTable({products}){
         <th>Price</th>
        </tr>
      </thead>
-     
+
      <tbody>
          {products.map((product) => {return <ProductRow key={product.id} product={product}/>})}
      </tbody>
      
 
  </table>
- )
-}
+ </div>
+)}
 
 export default ProductTable;

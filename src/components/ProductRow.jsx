@@ -1,10 +1,11 @@
 function ProdcutRow({ product }) {
-  console.log(product);
+  console.log(product)
+  const rowClass = product.inStock ? 'product-row' : 'product-row-not-stock';
   return (
 
-  <tr  style={{width: '100%', backgroundColor: 'white'}}>
+  <tr  style={{ backgroundColor: 'white'}}>
     
-      <td style={{width: '50%'}}> {product.name} </td>
+      <td className={rowClass} style={{width: '50%'}}> {product.name} </td>
       <td style={{width: '50%'}}> {product.price} </td>
   </tr>
   
