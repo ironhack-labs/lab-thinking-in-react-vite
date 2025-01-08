@@ -14,8 +14,8 @@ function ProductsPage() {
   )
   return (
     <>
-      <SearchBar/>
-      <ProductTable products={products}/>
+      <SearchBar inputText={inputText} setInputText={setInputText}/>
+      <ProductTable products={filteredProducts}/>
       
     </>
   );
