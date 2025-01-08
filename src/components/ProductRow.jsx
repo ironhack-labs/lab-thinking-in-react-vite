@@ -2,7 +2,7 @@ function ProdcutRow({ product }) {
   console.log(product);
   return (
 
-<table style={{width: '100%', backgroundColor: 'lightgray'}}>
+
 
   <tbody>
   <tr  style={{width: '100%', backgroundColor: 'white'}}>
@@ -12,7 +12,7 @@ function ProdcutRow({ product }) {
   </tr>
   </tbody>
 
-</table>
+
      
   );
 }

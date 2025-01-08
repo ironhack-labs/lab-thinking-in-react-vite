@@ -6,16 +6,17 @@ import ProductRow from "../components/ProductRow";
 import SearchBar from "../components/SearchBar";
 
 function ProductsPage() {
-  const [products, setProducts] = useState(jsonData);
+  const [products] = useState(jsonData);
+  const [inputText, setInputText] = useState('');
 
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(inputText.toLowerCase())
+  )
   return (
     <>
-      
       <SearchBar/>
-      <ProductTable />
-      {products.map((product) => {
-        return <ProductRow key={product.id} product={product} />;
-      })}
+      <ProductTable products={products}/>
+      
     </>
   );
 }
