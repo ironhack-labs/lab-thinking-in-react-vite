@@ -1,4 +1,5 @@
 import ProductRow from "../ProductRow/ProductRow"
+import './ProductTable.css'
 
 function ProductTable ({products}) {
     
@@ -13,13 +14,8 @@ function ProductTable ({products}) {
             </thead>
             <tbody>
                 {products.map((product)=>(
-                    <ProductRow key={product.id} product={product}
-                    />
+                    <ProductRow key={product.id} product={product}/>
                 ))}
-                
-               
-                
-               
             </tbody>
         </table>
     )

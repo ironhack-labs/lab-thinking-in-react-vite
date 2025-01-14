@@ -1,6 +1,12 @@
 import './SearchBar.css'
+import { useState } from "react";
 
 function SearchBar ({name, setName, products, onStockFilterChange, onlyInStock}) {
+    const [check, setCheck] = useState(false)
+
+
+
+
     
 
     return(
@@ -19,7 +25,10 @@ function SearchBar ({name, setName, products, onStockFilterChange, onlyInStock})
                 <input 
                 id="check"  
                 type="checkbox"
-                 onChange={(e) => onlyInStock(e.target.checked)}
+                onChange={(e) => {
+                        setCheck(e.target.checked);
+                        onStockFilterChange(e.target.checked);
+                    }}
                  />
                 <label id="check" >Only show products in stock</label>
             </div>
