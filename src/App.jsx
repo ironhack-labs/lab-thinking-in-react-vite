@@ -1,11 +1,18 @@
 import "./App.css";
+import ProductRow from "./components/ProductRow/ProductRow";
+import ProductTable from "./components/ProductTable/ProductTable";
+import ProductsPage from "./components/ProductsPage/ProductsPage";
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <h1>React | Thinking in React</h1>
-    </div>
-  );
+  return(
+    <>
+      <ProductsPage />
+    </>
+
+  )
+  
 }
 
 export default App;
